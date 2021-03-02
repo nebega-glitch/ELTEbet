@@ -5,7 +5,7 @@ Egy webes goltotó alkalmazás a 2021-es európa bajnoksághoz.
 
 ## Szabályrendszer
 A felhasználók tippelhetnek a mérközésekre, legkésöbb azok kezdetéig.
-Egy mérközésre leadott tipp
+Egy mérközésre leadott tipp..
 - **5 pontot** ér, ha pontosan eltalálja az eredményt.
 - **3 pontot** ér, ha eltalálja a meccs kimenetelét és a vendég/hazai gólkülönbséget, de a pontos gólszámot nem.
 - **2 pontot** ér, ha eltalálja a meccs kimenetelét, de se a gólkülönbséget, se a pontos gólszámot nem sikerül megtippelni.
