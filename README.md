@@ -1,4 +1,4 @@
-# ELTEbet&#x26BD; -- 2021-es EB góltotó projekt felhasználói dokumentációja
+# ELTEbet&#x26BD; &mdash; 2021-es EB góltotó projekt felhasználói dokumentációja
 Egy webes goltotó alkalmazás a 2021-es európa bajnoksághoz.
 
 ![Euro 2020 logo](/documentation/UEFA_Euro_2020_Logo.svg)
@@ -19,13 +19,13 @@ Egy mérközésre leadott tipp..
 - A felhasználó a tippjéért **2 pontot** kap, mert eltalálta a mérközés kimenetelét és a gólszámot, de a vendég/hazai gólkülönbséget nem.
 
 ### Példa #2
-**Svédország–Lengyelország**
+**Svédország – Lengyelország**
 - Felhasználó tippje: 1-1
 - Hivatalos eredmény: 0-0
 - A felhasználó a tippjéért **1 pontot** kap, mert csak a mérközés kimenetelét tippelte meg helyesen.
 
 ### Példa #3
-**Horvátország–Skócia**
+**Horvátország – Skócia**
 - Felhasználó tippje: 4-3
 - Hivatalos eredmény: 2-1
 - A felhasználó a tippjéért **3 pontot** kap, mert eltalálta a mérközés kimenetelét és a vendég/hazai gólkülönbséget, de a gólszámot nem.
