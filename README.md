@@ -17,4 +17,5 @@ Egy mérközésre leadott tipp..
 - Ranglista, amely a hivatalos eredmény felvitele után automatikusan frissül.
 
 ## Nem funkcionális követelmények
-- Igényes, felhasználó barát kinézet.
+- Igényes, felhasználó barát, reszponzív felület.
+- Legfrissebb Chrome/Opera böngésző.
