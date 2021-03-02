@@ -40,4 +40,4 @@ Egy mérkőzésre leadott tipp..
 
 ## Nem funkcionális követelmények
 - Igényes, felhasználó barát, reszponzív felület.
-- Legfrissebb Chrome/Opera böngésző.
+- Legújabb Chrome/Opera böngésző.
