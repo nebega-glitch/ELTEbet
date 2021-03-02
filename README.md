@@ -15,20 +15,20 @@ Egy mérközésre leadott tipp..
 ### Példa #1
 **Németország - Magyarország**
 - Felhasználó tippje: 4-2
-- Hivatalos eredmény: 5-1 <br>
-A felhasználó a tippjéért **2 pontot** kap, mert eltalálta a mérközés kimenetelét és a gólszámot, de a vendég/hazai gólkülönbséget nem.
+- Hivatalos eredmény: 5-1
+- A felhasználó a tippjéért **2 pontot** kap, mert eltalálta a mérközés kimenetelét és a gólszámot, de a vendég/hazai gólkülönbséget nem.
 
 ### Példa #2
 **Svédország–Lengyelország**
 - Felhasználó tippje: 1-1
-- Hivatalos eredmény: 0-0 <br>
-A felhasználó a tippjéért **1 pontot** kap, mert csak a mérközés kimenetelét tippelte meg helyesen.
+- Hivatalos eredmény: 0-0
+- A felhasználó a tippjéért **1 pontot** kap, mert csak a mérközés kimenetelét tippelte meg helyesen.
 
 ### Példa #3
 **Horvátország–Skócia**
 - Felhasználó tippje: 4-3
-- Hivatalos eredmény: 2-1 <br>
-A felhasználó a tippjéért **3 pontot** kap, mert eltalálta a mérközés kimenetelét és a vendég/hazai gólkülönbséget, de a gólszámot nem.
+- Hivatalos eredmény: 2-1
+- A felhasználó a tippjéért **3 pontot** kap, mert eltalálta a mérközés kimenetelét és a vendég/hazai gólkülönbséget, de a gólszámot nem.
 
 
 ## Funkcionális követelmények
