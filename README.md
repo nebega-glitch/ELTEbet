@@ -1,4 +1,4 @@
-# ELTEbet&#x26BD; &mdash; 2021-es EB góltotó projekt felhasználói dokumentációja
+# ELTEbet&#x26BD; &ndash; 2021-es EB góltotó projekt felhasználói dokumentációja
 Egy webes goltotó alkalmazás a 2021-es európa bajnoksághoz.
 
 ![Euro 2020 logo](/documentation/UEFA_Euro_2020_Logo.svg)
