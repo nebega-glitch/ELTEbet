@@ -30,6 +30,9 @@ Egy mérkőzésre leadott tipp..
 - Hivatalos eredmény: 2-1
 - A felhasználó a tippjéért **3 pontot** kap, mert eltalálta a mérkőzés kimenetelét és a vendég/hazai gólkülönbséget, de a gólszámot nem.
 
+## Szerepkörök
+- Felhasználó: Tud regisztrálni és tippeket leadni, látja a ranglistát.
+- Szervező: Tud regisztrálni és tippeket leadni, látja a ranglistát és ő viszi fel fel a hivatalos eredményeket.
 
 ## Funkcionális követelmények
 - A felhasználó tud magának fiókot regisztrálni, ami szükséges a tippeléshez.
