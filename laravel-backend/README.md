@@ -8,8 +8,8 @@
 </p>
 
 ## Backend futtatása
-- `composer install`
-- `php artisan migrate:reset`
-- `php artisan migrate`
-- `php artisan db:seed`
-- `php artisan serve`
+1. `composer install`
+2. `php artisan migrate:reset`
+3. `php artisan migrate`
+4. `php artisan db:seed`
+5. `php artisan serve`
