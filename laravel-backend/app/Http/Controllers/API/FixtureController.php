@@ -13,7 +13,7 @@ class FixtureController extends Controller
 {
     public function index()
     {
-        return Fixture::all();
+        return json_encode(Fixture::all());
     }
 
     public function store(Request $request)
@@ -29,13 +29,13 @@ class FixtureController extends Controller
             try{
                 If($request->Team1Id != $request->Team2Id){
                     $temp=Fixture::create($request->all());
-                    return response($temp,201);
+                    return response(json_encode($temp),201);
                 } else return response([
-                    'message' => 'Equal'
+                    'message' => 'Azonos IDk'
                 ], 500);
             } catch(Exception $e){
                 return response([
-                    'message' => 'DB Error'
+                    'message' => 'Adatbazis hiba'
                 ], 500);
             }
         } else return response([
@@ -56,10 +56,10 @@ class FixtureController extends Controller
                 ]);
                 try{
                     $fixture->update($request->all());
-                    return response($fixture,201);
+                    return response(json_encode($fixture),201);
                 } catch(Exception $e){
                     return response([
-                        'message' => 'DB Error'
+                        'message' => 'Adatbazis hiba'
                     ], 500);
                 }
             }else return response([
@@ -79,14 +79,43 @@ class FixtureController extends Controller
                 $request->validate([
                     'Team1Score' =>'required|integer|min:0',
                     'Team2Score' =>'required|integer|min:0',
-                    'Result' => 'required'
                 ]);
                 try{
-                    $fixture->update($request->all());
-                    return response($fixture,201);
+                    $result ='';
+                    if ($request->Team1Score == $request->Team2Score){
+                        $result = 'D';
+                    }
+                    else if($request->Team1Score > $request->Team2Score){
+                        $result = 'H';
+                    } else $result = 'V';
+                    $fixture->update([
+                        'Team1Score' => $request->Team1Score,
+                        'Team2Score' => $request->Team2Score,
+                        'Result' => $result
+                    ]);
+                    $tips = $fixture->tips;
+                    foreach($tips as $tip){
+                        $p = 0;
+                        if ($fixture->Result == 'V' && $tip->Team1Score < $tip->Team2Score 
+                        || $fixture->Result == 'H' && $tip->Team1Score > $tip->Team2Score 
+                        || $fixture->Result == 'D' && $tip->Team1Score == $tip->Team2Score){
+                            if($fixture->Team1Score == $tip->Team1Score && $fixture->Team2Score == $tip->Team2Score){
+                                $p = 5;
+                            }
+                            else if(($fixture->Team1Score - $fixture->Team2Score) == ($tip->Team1Score - $tip->Team2Score)){
+                                $p = 3;
+                            }
+                            else if (($fixture->Team1Score + $fixture->Team2Score) == ($tip->Team1Score + $tip->Team2Score)){
+                                $p = 2;
+                            }else $p = 1;
+                        }
+                        $temp = Tip::find($tip->id);
+                        $temp->update(['Points'=>$p]);
+                    }
+                    return response(json_encode($fixture),201);
                 } catch(Exception $e){
                     return response([
-                        'message' => 'DB Error'
+                        'message' => 'Adatbazis hiba'
                     ], 500);
                 }
             }else return response([

@@ -12,7 +12,7 @@ class TipController extends Controller
     {
         $user = auth()->user();
         $tips = $user->tips;
-        return $tips;
+        return json_encode($tips);
     }
 
     public function store(Request $request)
@@ -29,10 +29,10 @@ class TipController extends Controller
                 'Team1Score' => $request->Team1Score,
                 'Team2Score' => $request->Team2Score
             ]);
-            return response($tip,201);
+            return response(json_encode($tip),201);
         }catch (Exception $e){
             return response([
-                'message' => 'DB Error'
+                'message' => 'Adatbazis hiba'
             ], 500);
         }
     }
@@ -54,10 +54,10 @@ class TipController extends Controller
                         'Team1Score' => $request->Team1Score,
                         'Team2Score' => $request->Team2Score
                     ]);
-                    return response($tip,201);
+                    return response(json_encode($tip),201);
                 } catch(Exception $e){
                     return response([
-                        'message' => 'DB Error'
+                        'message' => 'Adatbazis hiba'
                     ], 500);
                 }
             }else return response([

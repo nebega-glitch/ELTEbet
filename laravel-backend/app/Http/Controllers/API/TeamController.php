@@ -11,7 +11,7 @@ class TeamController extends Controller
 {
     public function index()
     {
-        return Team::all();
+        return json_encode(Team::all());
     }
 
 }
