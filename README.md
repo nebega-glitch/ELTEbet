@@ -1,5 +1,5 @@
 # ELTEbet&#x26BD; felhasználói dokumentációja
-Egy webes goltotó alkalmazás a 2021-es európa bajnoksághoz.
+Egy webes góltotó alkalmazás a 2021-es európa bajnoksághoz.
 
 ![Euro 2020 logo](/documentation/UEFA_Euro_2020_Logo.svg)
 
@@ -32,15 +32,50 @@ Egy mérkőzésre leadott tipp..
 
 ## Szerepkörök
 - Felhasználó: Tud regisztrálni és tippeket leadni, látja a ranglistát.
-- Szervező: Tud regisztrálni és tippeket leadni, látja a ranglistát és ő viszi fel fel a hivatalos eredményeket.
+- Szervező: Tud regisztrálni és tippeket leadni, mérkőzést hozzáadni, módosítani és törölni, látja a ranglistát és ő viszi fel fel a hivatalos eredményeket.
 
 ## Funkcionális követelmények
 - A felhasználó tud magának fiókot regisztrálni, ami szükséges a tippeléshez.
-- Felhasználó tippelhet a mérkőzések végeredményeire azok kezdetéig, módosíthajta is a tippjeit.
+- Felhasználó tippelhet a mérkőzések végeredményeire azok kezdetéig, módosíthatja is a tippjeit.
 - Szervező olyan felhasználó, aki felelős a hivatalos eredmények feltöltésért.
-- A felhasználó vissznézheti a tippjeit és az azokért kapott pontokat.
+- A szervezőt már tartalmazza az adatbázis.
+- A felhasználó visszanézheti a tippjeit és az azokért kapott pontokat.
 - Ranglista, amely a mérkőzések hivatalos eredményeinek felvitele után automatikusan frissül.
 
 ## Nem funkcionális követelmények
 - Igényes, felhasználó barát, reszponzív felület.
 - Legújabb Chrome/Opera böngésző.
+
+## Könyvtárstruktúra
+- backend
+  - laravel-backend
+- frontend
+  - TODO
+
+## Backend megvalósítása
+
+### Felhasznált technológiák
+- Framework: Laravel
+- Autentikáció: Laravel Sanctum (JWT Token)
+- Adatbázis: SQLite
+
+### ER diagram
+![ER](/documentation/ER_diagram.png)
+
+### Végpontok
+- Hitelesítés nélkül
+  -  `POST /api/register` - Regisztráció
+  -  `POST /api/login` - Bejelentkezés
+- Hitelesítéssel
+  - `POST /api/logout` - Kijelentkezés
+  - `GET /api/fixtures` - Kilistázza a meccseket
+  - `POST /api/fixtures` - Meccs hozzáadása
+  - `PUT /api/fixtures/{id}` - Egy adott meccs adatainak módosítása
+  - `PUT /api/fixtures/final/{id}` - Egy adott meccs végeredményének megadása
+  - `DELETE /api/fixtures/{id}` - Meccs törlése
+  - `GET /api/tips` - Adott felhasználóhoz tartozó tippek kilistázása
+  - `POST /api/tips` - Tipp hozzáadása
+  - `PUT /api/tips/{id}` - Adott tipp módosítása
+  - `DELETE /api/tips/{id}` - Adott tipp törlése
+  - `GET /api/ranking` - Ranglista
+  - `GET /api/teams` - Csapatok kilistázása
