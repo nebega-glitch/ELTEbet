@@ -13,7 +13,7 @@ class FixtureController extends Controller
 {
     public function index()
     {
-        return json_encode(Fixture::all());
+        return Fixture::all();
     }
 
     public function store(Request $request)
@@ -29,7 +29,7 @@ class FixtureController extends Controller
             try{
                 If($request->Team1Id != $request->Team2Id){
                     $temp=Fixture::create($request->all());
-                    return response(json_encode($temp),201);
+                    return response($temp,201);
                 } else return response([
                     'message' => 'Azonos IDk'
                 ], 500);
@@ -56,7 +56,7 @@ class FixtureController extends Controller
                 ]);
                 try{
                     $fixture->update($request->all());
-                    return response(json_encode($fixture),201);
+                    return response($fixture,201);
                 } catch(Exception $e){
                     return response([
                         'message' => 'Adatbazis hiba'
@@ -112,7 +112,7 @@ class FixtureController extends Controller
                         $temp = Tip::find($tip->id);
                         $temp->update(['Points'=>$p]);
                     }
-                    return response(json_encode($fixture),201);
+                    return response($fixture,201);
                 } catch(Exception $e){
                     return response([
                         'message' => 'Adatbazis hiba'

@@ -22,7 +22,7 @@ class RankingListController extends Controller
             $rankingList[$user->name] = $counter;
         }
         krsort($rankingList);
-        return json_encode($rankingList);
+        return $rankingList;
     }
 
 }
