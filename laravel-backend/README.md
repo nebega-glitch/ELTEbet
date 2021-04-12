@@ -13,3 +13,9 @@
 3. `php artisan migrate`
 4. `php artisan db:seed`
 5. `php artisan serve`
+
+## Tesztek futtatása
+1. `php artisan migrate:reset`
+2. `php artisan migrate`
+3. `php artisan db:seed`
+4. `php artisan test`
