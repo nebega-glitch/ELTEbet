@@ -56,7 +56,7 @@ Egy mérkőzésre leadott tipp..
 
 ### Felhasznált technológiák
 - Framework: Laravel
-- Autentikáció: Laravel Sanctum (JWT Token)
+- Hitelesítés: Laravel Sanctum
 - Adatbázis: SQLite
 
 ### ER diagram
